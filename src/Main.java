@@ -6,6 +6,8 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
+        task8();
     }
 
     public static void task1() {
@@ -91,11 +93,34 @@ public class Main {
         int totalContribution = 12_000_000;
         int monthPerYear = 9 * 12;
         int mouth = 1;
-        while (contribution <= monthPerYear) {
+        while (mouth <= monthPerYear) {
             contribution += contribution * percent;
             if (mouth % 6 == 0) {
-            System.out.println("Месяц " + mouth + ", сумма накоплений: " + contribution);}
+                System.out.println("Месяц " + mouth + ", сумма накоплений: " + contribution);
+            }
             mouth++;
         }
     }
+
+    public static void task7() {
+        System.out.println("Задача 7");
+        int friday = 2;
+        int day = 31;
+        while (friday <= day) {
+            System.out.println("Сегодня пятница " + friday + "-е число, неободимо подготовить отчёт.");
+            friday += 7;
+        }
+    }
+    public static void task8() {
+        System.out.println("Задача 8");
+        int thisYear = 2022;
+        int givenYear = thisYear - 200;
+        int nextYear = thisYear + 100;
+        for (int year = givenYear; year <= nextYear; year++) {
+            if (year % 79 == 0) {
+                System.out.println(year);
+            }
+        }
+    }
+
 }
